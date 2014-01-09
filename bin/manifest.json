@@ -1,0 +1,29 @@
+{
+	"name": "Pygmentx",
+	"version": "0.0.4.1",
+	"manifest_version": 2,
+	"description": "Use an improved verison of Pygments in Github for Haxe syntax highlighting.",
+	"content_scripts" : [
+		{
+			"matches" : [
+				"https://github.com/*",
+				"https://gist.github.com/*"
+			],
+			"js" : [
+				"jquery-1.9.1.min.js", 
+				"contentscript.js"
+			],
+			"run_at" : "document_idle"
+		}
+	],
+	"permissions": [
+		"http://pygmentx.onthewings.net/"
+	],
+	"icons" : {
+		"48" : "pygmentx-logo-48.png",
+		"128" : "pygmentx-logo-128.png"
+	},
+	"web_accessible_resources": [
+		"pygmentx-logo.png"
+	]
+}
