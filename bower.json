@@ -1,0 +1,22 @@
+{
+  "name": "pygmentx",
+  "version": "0.0.5",
+  "homepage": "https://github.com/andyli/pygmentx",
+  "authors": [
+    "Andy Li <andy@onthewings.net>"
+  ],
+  "description": "A Chrome Extension to use an improved verison of Pygments in Github for Haxe syntax highlighting.",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "mutation-summary": "git+https://code.google.com/p/mutation-summary/"
+  }
+}

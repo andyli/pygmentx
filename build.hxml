@@ -3,3 +3,7 @@
 -lib jQueryExtern
 -lib chrome-extension
 -main ContentScript
+-debug
+-cmd cp bower_components/jquery/dist/jquery.min.js bin/jquery.min.js
+-cmd cp bower_components/jquery/dist/jquery.min.map bin/jquery.min.map
+-cmd cp bower_components/mutation-summary/src/mutation-summary.js bin/mutation-summary.js
