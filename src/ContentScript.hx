@@ -19,9 +19,15 @@ class ContentScript {
 		var url = cast (new JQuery(blobDiv).parent(".file").find("#raw-url, .raw-url")[0], AnchorElement).href;
 		// trace(url);
 		var container = new JQuery(blobDiv).find(".highlight pre").parent();
+		var firstlineid = container.find(".line:first").attr("id");
+		var lineidprefix = firstlineid.substring(0, firstlineid.lastIndexOf("1"));
 		container
 			.data("pygmentx-original", container.html())
-			.load('http://pygmentx.onthewings.net/?url=${url} .highlight pre',
+			.load('http://pygmentx.onthewings.net/ .highlight pre',
+				JQuery._static.param({
+					url: url,
+					lineidprefix: lineidprefix
+				}),
 				function(responseText, textStatus, XMLHttpRequest){
 					if (textStatus != "success") {
 						trace(textStatus);
