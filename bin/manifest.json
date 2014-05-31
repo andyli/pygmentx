@@ -1,6 +1,6 @@
 {
 	"name": "Pygmentx",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"manifest_version": 2,
 	"description": "Use an improved verison of Pygments in Github for Haxe syntax highlighting.",
 	"content_scripts" : [
